@@ -37,4 +37,14 @@ const { data } = useFetch<Country[]>(
 .details {
   margin-top: 5rem;
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin-top: 3rem;
+  }
+
+  .details {
+    margin-top: 3rem;
+  }
+}
 </style>

@@ -101,4 +101,14 @@ const colorMode = useColorMode();
   font-weight: 600;
   cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+  .site-title {
+    font-size: 1.2rem;
+  }
+
+  .color-mode {
+    font-size: 0.875rem;
+  }
+}
 </style>
