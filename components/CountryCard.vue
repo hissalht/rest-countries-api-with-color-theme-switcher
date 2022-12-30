@@ -8,7 +8,13 @@ defineProps<{
 
 <template>
   <div class="country-card">
-    <img :src="country.flags.svg" alt="" width="300" height="200" />
+    <img
+      :src="country.flags.svg"
+      loading="lazy"
+      alt=""
+      width="300"
+      height="200"
+    />
 
     <div class="informations">
       <NuxtLink
@@ -41,7 +47,7 @@ defineProps<{
 <style scoped>
 .country-card {
   background-color: var(--element-background);
-  max-width: 16.5rem;
+  width: 16.5rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -50,9 +56,8 @@ defineProps<{
 }
 
 @media screen and (max-width: 500px) {
-  /* max-width: default; */
   .country-card {
-    max-width: none;
+    width: 100%;
   }
 }
 
