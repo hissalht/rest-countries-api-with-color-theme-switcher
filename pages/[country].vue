@@ -18,8 +18,6 @@ const { data } = useFetch<Country[]>(
 
 <style scoped>
 .container {
-  max-width: 80rem;
-  margin: auto;
   margin-top: 5rem;
 }
 

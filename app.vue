@@ -62,6 +62,13 @@ const colorMode = useColorMode();
   --site-background: var(--very-light-gray);
   --text-color: var(--very-dark-blue-text);
 }
+
+.container {
+  margin: auto;
+  max-width: 82rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 </style>
 
 <style scoped>
@@ -81,6 +88,9 @@ const colorMode = useColorMode();
 .site-header {
   padding: 2rem 0;
   background-color: var(--element-background);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .color-mode {

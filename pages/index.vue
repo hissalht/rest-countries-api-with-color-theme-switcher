@@ -18,16 +18,18 @@ const { data } = useFetch<Country[]>("https://restcountries.com/v3.1/all");
 </template>
 
 <style scoped>
-.container {
-  max-width: 80rem;
-  margin: auto;
+.countries {
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem 2rem;
+  justify-content: space-between;
 }
 
-.countries {
-  display: grid;
-  gap: 5rem 1rem;
-  grid-template-columns: auto auto auto auto;
-  padding: 3rem 0;
-  justify-content: space-between;
+@media screen and (max-width: 1100px) {
+  .countries {
+    justify-content: space-evenly;
+    gap: 3rem 2rem;
+  }
 }
 </style>

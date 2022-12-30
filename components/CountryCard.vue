@@ -49,6 +49,13 @@ defineProps<{
   position: relative;
 }
 
+@media screen and (max-width: 500px) {
+  /* max-width: default; */
+  .country-card {
+    max-width: none;
+  }
+}
+
 img {
   width: 100%;
   height: auto;
