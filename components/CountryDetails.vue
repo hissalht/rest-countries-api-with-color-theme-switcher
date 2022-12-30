@@ -108,7 +108,7 @@ const borders = computed(
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: stretch;
-  gap: 8rem;
+  gap: 2rem;
 }
 
 img {
@@ -122,6 +122,7 @@ dl {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, auto);
   grid-auto-flow: column;
+  gap: 0 1rem;
 }
 
 dt,
@@ -169,5 +170,15 @@ p {
 
 .border-link + .border-link {
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .country {
+    grid-template-columns: 1fr;
+  }
+
+  dl {
+    display: block;
+  }
 }
 </style>
