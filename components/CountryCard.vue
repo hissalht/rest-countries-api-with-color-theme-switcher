@@ -1,13 +1,9 @@
 <script lang="ts" setup>
 import { Country } from "~~/types/countries-api";
 
-const props = defineProps<{
+defineProps<{
   country: Country;
 }>();
-
-if (!Array.isArray(props.country.capital)) {
-  console.log(props.country.capital);
-}
 </script>
 
 <template>
@@ -44,7 +40,7 @@ if (!Array.isArray(props.country.capital)) {
 
 <style scoped>
 .country-card {
-  background-color: var(--dark-blue);
+  background-color: var(--element-background);
   max-width: 16.5rem;
   border-radius: 0.5rem;
   display: flex;
@@ -67,7 +63,7 @@ img {
 .link {
   font-weight: 600;
   margin: 0;
-  color: var(--white);
+  color: inherit;
   text-decoration: none;
   outline: none;
 }

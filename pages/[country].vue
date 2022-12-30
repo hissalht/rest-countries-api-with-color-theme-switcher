@@ -24,8 +24,8 @@ const { data } = useFetch<Country[]>(
 }
 
 .back-link {
-  color: var(--white);
-  background-color: var(--dark-blue);
+  color: inherit;
+  background-color: var(--element-background);
   padding: 0.5rem 2.5rem;
   text-decoration: none;
   display: inline-block;

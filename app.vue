@@ -1,14 +1,25 @@
-<script lang="ts">
+<script lang="ts" setup>
 import "normalize.css/normalize.css";
 import "@fontsource/nunito-sans/300.css";
 import "@fontsource/nunito-sans/600.css";
 import "@fontsource/nunito-sans/800.css";
+
+const colorMode = useColorMode();
 </script>
 
 <template>
   <div class="site-header">
     <div class="container">
       <p class="site-title">Where in the world?</p>
+
+      <button
+        class="color-mode"
+        @click="
+          colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+        "
+      >
+        {{ colorMode.value === "dark" ? "Dark Mode" : "Light Mode" }}
+      </button>
     </div>
   </div>
   <NuxtPage />
@@ -36,9 +47,20 @@ import "@fontsource/nunito-sans/800.css";
 
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
+  background-color: var(--site-background);
+  color: var(--text-color);
+}
 
-  background-color: var(--very-dark-blue);
-  color: var(--white);
+:root.dark-mode {
+  --element-background: var(--dark-blue);
+  --site-background: var(--very-dark-blue);
+  --text-color: var(--white);
+}
+
+:root.light-mode {
+  --element-background: var(--white);
+  --site-background: var(--very-light-gray);
+  --text-color: var(--very-dark-blue-text);
 }
 </style>
 
@@ -52,10 +74,21 @@ import "@fontsource/nunito-sans/800.css";
 .container {
   max-width: 80rem;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .site-header {
   padding: 2rem 0;
-  background-color: var(--dark-blue);
+  background-color: var(--element-background);
+}
+
+.color-mode {
+  background-color: var(--element-background);
+  color: inherit;
+  border: none;
+  padding: 0.25rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 </style>

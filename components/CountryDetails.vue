@@ -155,8 +155,8 @@ p {
 }
 
 .border-link {
-  color: var(--white);
-  background-color: var(--dark-blue);
+  color: inherit;
+  background-color: var(--element-background);
   padding: 0.25rem 1.5rem;
   text-decoration: none;
   display: block;
